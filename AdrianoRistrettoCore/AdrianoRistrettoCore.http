@@ -1,0 +1,6 @@
+@AdrianoRistrettoCore_HostAddress = http://localhost:5067
+
+GET {{AdrianoRistrettoCore_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

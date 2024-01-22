@@ -1,0 +1,15 @@
+version: '3.4'
+
+services:
+  adrianoristrettocore:
+    image: ${DOCKER_REGISTRY-}adrianoristrettocore
+    build:
+      context: .
+      dockerfile: AdrianoRistrettoCore/Dockerfile
+    ports:
+      - "5000:80"
+    depends_on:
+      - mongodb
+  mongodb:
+    image: mongo:latest
+    restart: always
